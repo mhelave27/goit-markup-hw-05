@@ -52,7 +52,7 @@
         <section class="hero">
             <div class="container section-hero-container">
                 <h1 class="hero-heading">Effective Solution<br>for Your Business</h1>
-                <button type="button" class="hero-button">Order Service</button>
+                <button class="hero-button" type="button" data-modal-open> Order Service</button>
             </div>
         </section>
 
@@ -335,10 +335,12 @@
             </section>
     </footer>
 
-    <div class="modal is-hidden" data-modal>
+    <div class="modal" data-modal>
         <div class="modal-content">
-            <button class="modal-close" data-modal-close></button>
-            <img src="images/close.svg" alt="">
+            <button class="modal-close" data-modal-close>
+               <img src="./images/close-black.svg">
+            </button>
+           
         </div>
 
 
