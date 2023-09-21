@@ -90,13 +90,17 @@ address {
     column-gap: 40px;
 }
 
+
+.nav-list-item {
+    position: relative;
+}
 .nav-link {
     color: var(--navy-blue);
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    /* 150% */
     letter-spacing: 0.32px;
+    transition: color var(--transition-duration) var(--animation-timing-function);
 }
 
 .nav-link::after {
@@ -106,20 +110,29 @@ address {
     border-radius: 2px;
     position: absolute;
     left: 0;
+    width: 0%;
     bottom: -25px;
+    transition: width var(--transition-duration) var(--animation-timing-function);
 }
 
-.nav-list-item {
-    position: relative;
-}
-
-.nav-list-item:hover .nav-link::after {
+.nav-list-item:hover .nav-link {
+    color: var(--ocean);
     width: 100%;
 }
 
-.nav-link:hover, .nav-list-item:hover, .address-link:hover {
-    color:var(--ocean);
+.nav-list-item:hover .nav-link:after {
+    width: 100%;
 }
+
+.nav-link.active {
+    color: var(--ocean);
+}
+
+.nav-link.active:after {
+    color: var(--ocean);
+    width: 100%;
+}
+
 
 .address-list {
     display: flex;
@@ -128,13 +141,19 @@ address {
     margin-left: 332px;
 }
 
+
 .address-link {
     color: var(--slate);
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
+    transition: color var(--transition-duration) var(--animation-timing-function);
 }  
 
+.address-link:hover {
+    color: var(--ocean);
+}
+   
 /* -----------------HERO SECTION-------------------- */
 
 
@@ -173,6 +192,7 @@ address {
     letter-spacing: 0.64px;
     cursor: pointer;   
     font-family: inherit;
+    transition: all var(--transition-duration) var(--animation-timing-function);
 }
 
 .hero-button:hover {
@@ -251,7 +271,7 @@ address {
 .team-list-item:hover {
     box-shadow: 6px 6px 40px 10px rgba(46, 47, 66, 0.16);
     /* transform: translateY(20px); */
-    transition: var(--transition-duration);
+    transition: all var(--transition-duration) var(--animation-timing-function);
 }
 
 .team-position {
@@ -291,6 +311,7 @@ address {
     background-color: var(--iris);
     border-radius: 40px;
     justify-content: center;
+    transition: all var(--transition-duration) var(--animation-timing-function);
 }
 
 .icons-list {
@@ -340,7 +361,7 @@ address {
 .client-logo {
     border: solid 1px var(--light-slate);
     border-radius: 4px;
-    transition: var(--transition-duration) var(--animation-timing-function);
+    transition: all var(--transition-duration) var(--animation-timing-function);
     color: var(--light-slate);
 }
 
@@ -358,10 +379,12 @@ address {
     height: 88px;
     fill: currentColor;
     padding: 16px 32px;
+    transition: fill var(--transition-duration) var(--animation-timing-function);
 }
 
 .client-logo:hover .client-logo-link {
     color: var(--ocean);
+    transition: color var(--transition-duration) var(--animation-timing-function);
 }
     /* -----------------Footer Section------------------- */
 
@@ -398,6 +421,7 @@ footer {
     height: 24px;
     stroke-width: 1px;
     fill: var(--white);
+    transition: all var(--transition-duration) var(--animation-timing-function);
 }
 
 .footer-icons-list {
@@ -409,6 +433,7 @@ footer {
     border-radius: 40px;
     justify-content: center;
     cursor: pointer; 
+    transition: all var(--transition-duration) var(--animation-timing-function);
 
 }
 
@@ -421,7 +446,7 @@ footer {
     gap: 16px;
 } 
 
-    /* margin-left: 120px; */
+    
 
     /* ----------WEBSTUDIO LOGO-------------- */
 
@@ -620,6 +645,8 @@ button {
     transform: translateY(0);
 }
 
+    /* ---------------M O D A L---------------- */
+
 .modal {
     background-color: var(--navyblue-modal);
     position: fixed;
@@ -679,3 +706,16 @@ button {
 .modal-close:hover {
     background-color: var(--ocean);
 }
+
+.modal-close svg {
+    fill: currentColor;
+    transition: fill var(--transition-duration) var(--animation-timing-function);
+}
+
+.modal-close:hover svg {
+    fill: var(--white);
+}
+
+
+
+
