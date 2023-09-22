@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework#4</title>
+    <title>Homework#6</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -26,12 +26,12 @@
     <header class="header">
         <div class="container main-header-container">
             <nav class="nav-menu">
-                    <a class="logo" href="/goit-markup-hw-05/index.html" target="_blank"><span class="colored">WEB</span><span
+                    <a class="logo" href="/goit-markup-hw-06/index.html" target="_blank"><span class="colored">WEB</span><span
                      class="black">STUDIO</span></a>
 
                 <ul class="nav-list">
                     <li class="nav-list-item"><a class="nav-link active" href="index.html">Studio</a></li>
-                    <li class="nav-list-item"><a class="nav-link" href="/goit-markup-hw-05/portfolio.html">Portfolio</a></li>
+                    <li class="nav-list-item"><a class="nav-link" href="/goit-markup-hw-06/portfolio.html">Portfolio</a></li>
                     <li class="nav-list-item"><a class="nav-link" href="./index.html">Contacts</a></li>
             </ul>
         </nav>
@@ -298,7 +298,7 @@
     <footer>
         <section class="container footer-section">
             <div class= "footer-items">
-                <a class="footer-logo" href="/goit-markup-hw-05/index.html" target="_blank"><span class="colored">WEB</span><span class="white">STUDIO</span></a>
+                <a class="footer-logo" href="/goit-markup-hw-06/index.html" target="_blank"><span class="colored">WEB</span><span class="white">STUDIO</span></a>
                 <p class="footer-description">Increase the flow of customers and<br>
                     sales for your business with digital<br>
                     marketing & growth solutions.</p>
@@ -332,11 +332,59 @@
                     </li>
                  </ul>
                 </div>
+
+                <div class="footer-forms">
+                    <h3>Subscribe</h3>
+                        <form action="#" class="footer-forms-box">
+                            <input type="email" placeholder="E-mail">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="footer-subscribe-button">
+                    <button type="submit" class="subscribe-button">Subscribe
+                    <svg>
+                        <use href="./sprite.svg#Frame"></use>
+                    </svg>  
+                    </button>
+                </div>
+                        
             </section>
     </footer>
 
     <div class="modal is-hidden" data-modal>
         <div class="modal-content">
+            <h4 class="user-heading">Leave your contacts and we will call you back</h4>
+            <form class="user-contact">
+                <label>
+                    Name
+                    <input type="text"  name="full-name">
+                </label>
+
+                <label>
+                    Phone
+                    <input type="tel" name="phone">
+                </label>
+
+                <label>
+                    Email
+                    <input type="e-mail" name="email">
+                </label>
+
+                <label class="user-contact-comments">
+                    Comment
+                <textarea name="comments" rows="8" placeholder="Text input"></textarea>
+                </label>
+
+                <label class="user-contact-checkbox">
+                    <input type="checkbox" name="agree">
+                    I accept the terms and conditions of the 
+                    <a href="#"> Privacy Policy</a>
+                </label>
+
+                <button class="submit-button" type="submit">Send</button>
+            </form>
+
             <button class="modal-close" data-modal-close>
                <svg width="8" height="8">
                     <use href="./sprite.svg#close-black"></use>
@@ -344,7 +392,7 @@
             </button>
         </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

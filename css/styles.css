@@ -398,14 +398,12 @@ address {
 
 footer {
     background: var(--navy-blue);
-    padding: 101px 0;
-    
 }
 
 .footer-section {
     display: flex;
-    gap: 120px;
-    
+    justify-content: space-between;
+    padding: 100px 0;
 }
 
 .media-link {
@@ -446,7 +444,65 @@ footer {
     gap: 16px;
 } 
 
-    
+.footer-forms {
+    display: block;
+}
+
+.footer-forms h3 {
+    margin-bottom: 16px;
+    color: var(--white);
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+.footer-forms-box input {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    padding: 8px 16px;
+    color: var(--white);
+    background: transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: all var(--transition-duration) var(--animation-timing-function);
+}
+
+.footer-forms-box input::placeholder {
+    color: var(--white);
+    font: 12px;
+    line-height: 24px;
+}
+
+.subscribe-button {
+    background-color: var(--iris);
+    color: var(--white);
+    border: none;
+    width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition-duration) var(--animation-timing-function);
+}
+
+.subscribe-button svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 16px;
+}
+
+.subscribe-button:hover {
+    background-color: var(--ocean);
+}
 
     /* ----------WEBSTUDIO LOGO-------------- */
 
@@ -684,7 +740,16 @@ button {
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.14),
                 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+}
 
+.modal-content h4 {
+    color: var(--navy-blue);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .modal-close {
@@ -700,7 +765,7 @@ button {
     top: 24px;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.10);
-    transition: background-color var(--transition-duration) var(--animation-timing-function), color var(--transition-duration) var(--animation-timing-function);
+    transition: color var(--transition-duration) var(--animation-timing-function);
 }
 
 .modal-close:hover {
@@ -716,6 +781,81 @@ button {
     fill: var(--white);
 }
 
+.modal-content {
+    padding: 72px 24px;
+}
+.user-contact {
+    margin-top: 16px;
+}
+.user-contact label {
+    display: block;
+    margin-top: 8px;
+}
 
+.user-contact input, .user-contact textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 16px;
+}
+.user-contact textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+}
 
+label.user-contact-checkbox {
+    display: flex;
+}
+    
+.user-contact-checkbox input {
+    display: flex;
+    width: 16px; 
+    height: 16px; 
+    margin-right: 8px;
+    border-radius: 2px; 
+    border: 1px;
+}
 
+.user-contact-checkbox a {
+    text-decoration: underline;
+    color: var(--iris);
+    transition: color var(--transition-duration) var(--animation-timing-function);
+}
+
+.user-contact-checkbox a:hover {
+    color: var(--ocean);
+}
+.user-contact label {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: var(--light-slate);
+}
+
+.submit-button {
+    background-color: var(--iris);
+    color: var(--white);
+    outline: none;
+    border: unset;
+    padding: 16px 32px;
+    display: flex;
+    margin: auto;
+    min-width: 169px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--transition-duration) var(--animation-timing-function);
+}
+.submit-button:hover {
+    background-color: var(--ocean);
+}
